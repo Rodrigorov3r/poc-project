@@ -5,7 +5,7 @@
   "short_name": "SPA-Fichadas-MiAndreani",
   "id": "SPA-Fichadas-MiAndreani-PocWidget-",
   "description": "POC Widget de Fichadas Mi Andreani",
-  "start_url": "/",
+  "start_url": "/poc-project/",
   "display": "standalone",
   "orientation": "any", 
 "screenshots": [
