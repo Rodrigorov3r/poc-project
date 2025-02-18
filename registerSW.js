@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/poc-project/sw.js', { scope: '/poc-project/' })})}
