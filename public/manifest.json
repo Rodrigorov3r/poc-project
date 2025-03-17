@@ -48,5 +48,30 @@
   ],
   "edge_side_panel": {
     "preferred_width": 400
-  }
+  },
+  "widgets": [
+    {
+        "name": "HCM",
+        "description": "widget to control the HCM",
+        "tag": "hcm",
+        "template": "pwamp-template",
+        "ms_ac_template": "/hcm-card.json",
+        "type": "application/json",
+        "screenshots": [
+            {
+                "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+                "sizes": "600x400",
+                "label": "The PWAmp mini-player widget"
+            }
+        ],
+        "icons": [
+            {
+                "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+                "sizes": "16x16"
+            }
+        ],
+        "auth": false,
+        "update": 86400
+    }
+]
 }
