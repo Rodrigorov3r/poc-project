@@ -1,20 +1,35 @@
 {
   "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
   "body": [
-    {
-      "type": "TextBlock",
-      "size": "Medium",
-      "text": "Now playing...",
-      "horizontalAlignment": "Center"
-    },
-    {
-      "type": "TextBlock",
-      "spacing": "Large",
-      "weight": "Bolder",
-      "horizontalAlignment": "Center",
-      "text": "Hola"
-    }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.5"
+      {
+          "type": "TextBlock",
+          "text": "HCM | Reserva de Escritorio",
+          "wrap": true,
+          "horizontalAlignment": "Center",
+          "spacing": "ExtraLarge",
+          "maxLines": 2,
+          "style": "heading",
+          "fontType": "Default",
+          "size": "ExtraLarge",
+          "weight": "Bolder",
+          "color": "Default",
+          "isSubtle": false
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.OpenUrl",
+                  "title": "Ir a Reservar Escritorio",
+                  "style": "positive",
+                  "id": "open_url",
+                  "tooltip": "Reservar Escritorio",
+                  "url": "https://mi.andreani.com"
+              }
+          ],
+          "horizontalAlignment": "Right"
+      }
+  ]
 }
