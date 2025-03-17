@@ -47,5 +47,6 @@
   ],
   "edge_side_panel": {
     "preferred_width": 400
-  }
+  },
+  "ms_ac_template": "./poc-widget.json"
 }
