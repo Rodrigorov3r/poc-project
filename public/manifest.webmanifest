@@ -1,10 +1,10 @@
 {
     "name": "SPA-Fichadas-MiAndreani",
     "short_name": "SPA-Fichadas-MiAndreani",
-    "start_url": "/poc-project/",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "lang": "en",
+    "lang": "es",
     "scope": "/poc-project/",
     "theme_color": "#000000",
     "id": "SPA-Fichadas-MiAndreani-PocWidget-",
@@ -14,8 +14,7 @@
         {
             "src": "https://rodrigorov3r.github.io/poc-project/screenshots/desktop.png",
             "sizes": "1806x821",
-            "type": "image/png",
-            "form_factor": "wide"
+            "type": "image/png"
         },
         {
             "src": "https://rodrigorov3r.github.io/poc-project/screenshots/mobile.png",
@@ -53,14 +52,14 @@
             "name": "HCM",
             "description": "widget to control the HCM",
             "tag": "hcm",
-            "template": "pwamp-template",
+            "template": "hcm-template",
             "ms_ac_template": "https://rodrigorov3r.github.io/poc-project/hcm-card.json",
             "type": "application/json",
             "screenshots": [
                 {
                     "src": "https://rodrigorov3r.github.io/poc-project/mi_andreani_512.png",
                     "sizes": "512x512",
-                    "label": "The PWAmp mini-player widget"
+                    "label": "The HCM mini-player widget"
                 }
             ],
             "icons": [

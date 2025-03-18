@@ -23,7 +23,7 @@ async function renderWidget(widget) {
 
 async function updateWidgets() {
     // Get the widget that match the tag defined in the web app manifest.
-    const widget = await self.widgets.getByTag("pwamp");
+    const widget = await self.widgets.getByTag("hcm");
     if (!widget) {
         return;
     }
