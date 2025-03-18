@@ -16,20 +16,6 @@
           "weight": "Bolder",
           "color": "Default",
           "isSubtle": false
-      },
-      {
-          "type": "ActionSet",
-          "actions": [
-              {
-                  "type": "Action.OpenUrl",
-                  "title": "Ir a Reservar Escritorio",
-                  "style": "positive",
-                  "id": "open_url",
-                  "tooltip": "Reservar Escritorio",
-                  "url": "https://mi.andreani.com"
-              }
-          ],
-          "horizontalAlignment": "Right"
       }
   ]
 }
