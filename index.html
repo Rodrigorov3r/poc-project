@@ -1,14 +1,31 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/poc-project/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-    <script type="module" crossorigin src="/poc-project/assets/index-DhkrAKP1.js"></script>
-    <link rel="stylesheet" crossorigin href="/poc-project/assets/index-n_ryQ3BS.css">
-  <link rel="manifest" href="/poc-project/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/poc-project/registerSW.js"></script></head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/poc-project/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SPA de Andreani" />
+  <meta content="Andreani, almacenamiento, tecnologia, empresa, correo, distribucion, logistica" name="keywords" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&family=Rubik:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="manifest" href="./manifest.webmanifest" data-preserve>
+  <script id="register" data-preserve>
+    if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/poc-project/sw.js', { scope: '/poc-project/' }) }) }
+  </script>
+  <title>Poc Widget</title>
+  <script type="module" crossorigin src="/poc-project/assets/index-DhkrAKP1.js"></script>
+  <link rel="stylesheet" crossorigin href="/poc-project/assets/index-n_ryQ3BS.css">
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+</body>
+
 </html>

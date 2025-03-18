@@ -1,1 +1,51 @@
-if(!self.define){let e,s={};const i=(i,n)=>(i=new URL(i+".js",n).href,s[i]||new Promise((s=>{if("document"in self){const e=document.createElement("script");e.src=i,e.onload=s,document.head.appendChild(e)}else e=i,importScripts(i),s()})).then((()=>{let e=s[i];if(!e)throw new Error(`Module ${i} didn’t register its module`);return e})));self.define=(n,r)=>{const t=e||("document"in self?document.currentScript.src:"")||location.href;if(s[t])return;let o={};const c=e=>i(e,t),l={module:{uri:t},exports:o,require:c};s[t]=Promise.all(n.map((e=>l[e]||c(e)))).then((e=>(r(...e),o)))}}define(["./workbox-e3490c72"],(function(e){"use strict";self.addEventListener("message",(e=>{e.data&&"SKIP_WAITING"===e.data.type&&self.skipWaiting()})),e.precacheAndRoute([{url:"assets/index-DhkrAKP1.js",revision:null},{url:"assets/index-n_ryQ3BS.css",revision:null},{url:"index.html",revision:"6398e686834494685d6cec08644bf117"},{url:"registerSW.js",revision:"d43864c996a71137caa019ca49b31398"},{url:"manifest.webmanifest",revision:"16b7d47569c3996cfc8f6d618c0a7d53"}],{}),e.cleanupOutdatedCaches(),e.registerRoute(new e.NavigationRoute(e.createHandlerBoundToURL("index.html")))}));
+self.addEventListener("widgetinstall", (event) => {
+    // The widget just got installed, render it using renderWidget.
+    // Pass the event.widget object to the function.
+    event.waitUntil(renderWidget(event.widget));
+});
+
+self.addEventListener("activate", (event) => {
+    event.waitUntil(updateWidgets());
+});
+
+async function renderWidget(widget) {
+    // Get the template and data URLs from the widget definition.
+    const templateUrl = widget.definition.msAcTemplate;
+    const dataUrl = widget.definition.data;
+
+    // Fetch the template text and data.
+    const template = await (await fetch(templateUrl)).text();
+    const data = await (await fetch(dataUrl)).text();
+
+    // Render the widget with the template and data.
+    await self.widgets.updateByTag(widget.definition.tag, { template, data });
+}
+
+async function updateWidgets() {
+    // Get the widget that match the tag defined in the web app manifest.
+    const widget = await self.widgets.getByTag("pwamp");
+    if (!widget) {
+        return;
+    }
+
+    // Using the widget definition, get the template and data.
+    const template = await (await fetch(widget.definition.msAcTemplate)).text();
+    const data = await (await fetch(widget.definition.data)).text();
+
+    // Render the widget with the template and data.
+    await self.widgets.updateByTag(widget.definition.tag, { template, data });
+}
+
+self.addEventListener('widgetclick', (event) => {
+    switch (event.action) {
+        case 'previous-song':
+            // Application logic to play the previous song...
+            break;
+        case 'next-song':
+            // Application logic to play the next song...
+            break;
+    }
+});
+
+
+
